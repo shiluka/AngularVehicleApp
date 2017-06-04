@@ -1,0 +1,15 @@
+<div class="container">
+    <hr>
+    <h3>Enter a vehicle</h3>
+    <input type="text" name="name" [(ngModel)]="name" />
+    <br><br>
+    <button (click)="addVehicle()">Add a vehicle</button>
+</div>
+<div class="vehicles">
+    <li *ngFor="let vehicle of vehicles">{{vehicle.name}}
+        <button (click)="removeVehicle(vehicle._id)">Delete vehicle</button>
+    </li>
+</div>
+<div class="specific">
+    {{specificVehicleName}}
+</div>
